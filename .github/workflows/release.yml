@@ -14,22 +14,17 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: "web-ext build"
-        id: web-ext-build
-        uses: kewisch/action-web-ext@v1
-        with:
-          cmd: build
-          source: .
-
       - name: Check
-        run: ls web-ext-artifacts
+        run: |
+          zip -r build.xpi index.html style.css manifest.json icons
+          ls
 
       - uses: trmcnvn/firefox-addon@v1
         with:
           # uuid is only necessary when updating an existing addon,
           # omitting it will create a new addon
           uuid: '{c4f0d47b-a428-4fe9-87e2-f6500c1423eb}'
-          xpi: target.xpi
+          xpi: build.xpi
           manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
