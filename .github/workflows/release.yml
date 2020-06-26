@@ -14,6 +14,7 @@ jobs:
           # uuid is only necessary when updating an existing addon,
           # omitting it will create a new addon
           uuid: '{c4f0d47b-a428-4fe9-87e2-f6500c1423eb}'
+          xpi: build/my-addon.xpi
           manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
