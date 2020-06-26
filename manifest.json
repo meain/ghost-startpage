@@ -1,9 +1,9 @@
 {
-	"name": "QuickTab",
-	"short_name": "QT",
-	"version": "0.6",
+	"name": "GhostPage",
+	"short_name": "GhostPage",
+	"version": "0.1",
 	"manifest_version": 2,
-	"description": "Simple clean newtab page with feeds",
+	"description": "Boooooooooooooo!",
 	"icons": {
 		 "48": "icons/icon_48.png",
 		 "16": "icons/icon_16.png"
