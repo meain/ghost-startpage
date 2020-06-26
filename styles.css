@@ -8,7 +8,7 @@ Setup:
 */
 
 :root {
-  --ghost-color: #ddd;
+  --ghost-color: black;
 }
 body{
     background-color: white;
