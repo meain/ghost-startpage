@@ -16,7 +16,7 @@ jobs:
 
       - name: Check
         run: |
-          zip -r build.xpi index.html style.css manifest.json icons
+          zip -r build.xpi index.html styles.css manifest.json icons
           ls
 
       - uses: trmcnvn/firefox-addon@v1
