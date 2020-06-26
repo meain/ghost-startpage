@@ -21,6 +21,9 @@ jobs:
           cmd: build
           source: .
 
+      - name: Check
+        run: ls web-ext-artifacts
+
       - uses: trmcnvn/firefox-addon@v1
         with:
           # uuid is only necessary when updating an existing addon,
