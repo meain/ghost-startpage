@@ -1,12 +1,3 @@
-/*
-Simple animated ghost from @MirkoWD
-
-Setup:
--Remove .body
--To remove the animation simply delete the code inside the ANIMATION tags
--The image is fully responsive, simple change the height and width of .ghost-canvas
-*/
-
 :root {
   --ghost-color: black;
 }
