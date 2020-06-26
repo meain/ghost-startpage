@@ -9,12 +9,19 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: "web-ext build"
+        id: web-ext-build
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: build
+          source: src
+
       - uses: trmcnvn/firefox-addon@v1
         with:
           # uuid is only necessary when updating an existing addon,
           # omitting it will create a new addon
           uuid: '{c4f0d47b-a428-4fe9-87e2-f6500c1423eb}'
-          xpi: build/my-addon.xpi
+          xpi: target.xpi
           manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
